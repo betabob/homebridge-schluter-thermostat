@@ -94,7 +94,7 @@ export class SchluterAPI {
     const params = { serialnumber: this.serialNumber };
     const data = {
       ComfortTemperature: Math.round(targetTemperature * 100),
-      RegulationMode: 2,
+      RegulationMode: 3,
     };
 
     await axios.post(SchluterAPI.thermostatUrl, data, { params: params });
